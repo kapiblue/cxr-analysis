@@ -2,6 +2,8 @@
 
 This repo stores the results of my preliminary analysis of the test set results (`Test_set_prediction.csv`).
 
+A data analysis report is available at: https://kapiblue.github.io/cxr-analysis/.
+
 ### Files:
 
 - `cxr_results_report.html` - a ydata generated report for the analysis of the raw csv file
