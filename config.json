@@ -1,0 +1,27 @@
+{
+    "architectures": {
+        "convnext_base": "TEST_AP_Score_convnext_base.csv",
+        "swin_base": "TEST_AP_Score_swin_base_patch4_window7_224.csv",
+        "vit_base": "TEST_AP_Score_vit_base_patch16_224.csv"
+    },
+    "data_path": "data",
+    "output_folder": "plots",
+    "columns_to_explain": [
+        "Label_0",
+        "Label_1",
+        "Label_2",
+        "Label_3",
+        "Label_4",
+        "Label_5"
+    ],
+    "numerical_columns": [
+        "anchor_age"
+    ],
+    "categorical_columns": [
+        "race",
+        "insurance",
+        "language",
+        "gender",
+        "marital_status"
+    ]
+}
