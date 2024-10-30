@@ -38,7 +38,6 @@ def generate_tree(
     None
     """
     logger.info(f"Generating Decision Tree for {target_column} and {architecture}")
-    logger.info(f"Number of rows for fitting the tree: {X.shape[0]}")
     classifier = DecisionTreeClassifier(random_state=1, max_depth=4)
     classifier.fit(X.values, y.values)
     y_pred = classifier.predict(X.values)
@@ -52,7 +51,7 @@ def generate_tree(
         y_train=y,
         feature_names=X.columns,
         target_name="Correct",
-        class_names=["incorrect", "correct"],
+        class_names=["correct", "incorrect"],
     )
     v = viz_model.view(
         title=f"Decision Tree for {target_column} and {architecture}",
@@ -110,7 +109,9 @@ for architecture in architectures:
     # Drop rows with any missing values
     df.dropna(inplace=True)
     X = prepare_features(df, categorical_columns, numerical_columns)
+    logger.info(f"Number of rows for fitting the tree: {X.shape[0]}")
     for target_column in target_columns:
         y = df[target_column]
+        class_proportions = y.value_counts(normalize=True)
+        logger.info(f"Class proportions\n{class_proportions}")
         generate_tree(X, y, target_column, architecture, output_folder)
-        break
