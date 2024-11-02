@@ -20,6 +20,7 @@ def generate_tree(
     X: pd.DataFrame,
     y: pd.Series,
     target_column: str,
+    threshold_value: int,
     architecture: str,
     output_folder: Path,
 ) -> None:
@@ -31,6 +32,7 @@ def generate_tree(
     X (pd.DataFrame): The input features for training the decision tree.
     y (pd.Series): The target labels for training the decision tree.
     target_column (str): The name of the target column.
+    threshold_value (int): The threshold value to create a binary target column.
     architecture (str): The architecture name for logging purposes.
     output_folder (Path): The directory where the decision tree visualization will be saved.
 
@@ -50,11 +52,11 @@ def generate_tree(
         X_train=X,
         y_train=y,
         feature_names=X.columns,
-        target_name="Correct",
-        class_names=["correct", "incorrect"],
+        target_name="Risk",
+        class_names=["High Risk", "Low Risk"],
     )
     v = viz_model.view(
-        title=f"Decision Tree for {target_column} and {architecture}",
+        title=f"Decision Tree for {architecture}\nHigh Risk if {target_column} <= {threshold_value}",
     )
     # Save the tree
     save_path = output_folder / f"tree_{target_column}_{architecture}.svg"
@@ -93,15 +95,16 @@ data_path = Path(config["data_path"])
 categorical_columns = config["categorical_columns"]
 numerical_columns = config["numerical_columns"]
 output_folder = Path(config["output_folder"])
+target_column = config["target_column"]
+thrshold_values = config["total_correct_threshold_values"]
 
 architectures = config["architectures"]
 for architecture in architectures:
     csv_path = data_path / architectures[architecture]
     logger.info(f"Reading data from {csv_path}")
     df = pd.read_csv(csv_path)
-    target_columns = config["columns_to_explain"]
-    # Create a subset of the dataframe
-    df = df[categorical_columns + numerical_columns + target_columns]
+    # Create a subset of the dataframe with only the columns of interest
+    df = df[categorical_columns + numerical_columns + [target_column]]
     logger.info(f"Total number of rows: {df.shape[0]}")
     logger.info(
         f"Number of missing values per column:\n{df[categorical_columns+numerical_columns].isnull().sum()}"
@@ -110,8 +113,9 @@ for architecture in architectures:
     df.dropna(inplace=True)
     X = prepare_features(df, categorical_columns, numerical_columns)
     logger.info(f"Number of rows for fitting the tree: {X.shape[0]}")
-    for target_column in target_columns:
-        y = df[target_column]
+    for threshold_value in thrshold_values:
+        # Create a binary target column baes on the threshold value
+        y = df[target_column] <= threshold_value
         class_proportions = y.value_counts(normalize=True)
         logger.info(f"Class proportions\n{class_proportions}")
-        generate_tree(X, y, target_column, architecture, output_folder)
+        generate_tree(X, y, target_column, threshold_value, architecture, output_folder)
