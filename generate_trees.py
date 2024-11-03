@@ -53,13 +53,13 @@ def generate_tree(
         y_train=y,
         feature_names=X.columns,
         target_name="Risk",
-        class_names=["High Risk", "Low Risk"],
+        class_names=["Low Risk", "High Risk"],
     )
     v = viz_model.view(
-        title=f"Decision Tree for {architecture}\nHigh Risk if {target_column} <= {threshold_value}",
+        title=f"Decision Tree for {architecture}\nHigh Risk is {threshold_value} or less correct predictions\nLow Risk is {threshold_value+1} or more correct predictions",
     )
     # Save the tree
-    save_path = output_folder / f"tree_{target_column}_{architecture}.svg"
+    save_path = output_folder / f"tree_{architecture}_n_{threshold_value}.svg"
     v.save(str(save_path))
     logger.info(f"Decision Tree saved at {save_path}")
 
@@ -113,9 +113,14 @@ for architecture in architectures:
     df.dropna(inplace=True)
     X = prepare_features(df, categorical_columns, numerical_columns)
     logger.info(f"Number of rows for fitting the tree: {X.shape[0]}")
+    # Display distribution of target values
+    logger.info(
+        f"Distribution of {target_column}:\n{df[target_column].value_counts(normalize=True).sort_index()}"
+    )
     for threshold_value in thrshold_values:
-        # Create a binary target column baes on the threshold value
+        # Create a binary target column based on the threshold value
+        logger.info(f"Threshold value: {threshold_value}")
         y = df[target_column] <= threshold_value
-        class_proportions = y.value_counts(normalize=True)
+        class_proportions = y.value_counts(normalize=True).reindex([True, False])
         logger.info(f"Class proportions\n{class_proportions}")
         generate_tree(X, y, target_column, threshold_value, architecture, output_folder)

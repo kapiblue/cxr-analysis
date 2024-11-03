@@ -8,6 +8,7 @@
     "output_folder": "plots",
     "target_column": "total_correct",
     "total_correct_threshold_values": [
+        0,
         1,
         2,
         3,
