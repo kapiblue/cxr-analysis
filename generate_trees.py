@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, confusion_matrix
 from logging import getLogger, Formatter, StreamHandler, INFO
 import dtreeviz
 import json
@@ -44,7 +44,13 @@ def generate_tree(
     classifier.fit(X.values, y.values)
     y_pred = classifier.predict(X.values)
     score = accuracy_score(y, y_pred)
+    tn, fp, fn, tp = confusion_matrix(y, y_pred).ravel()
+    # Calculate the true positive rate and false positive rate
+    tpr = tp / (tp + fn)
+    fpr = fp / (fp + tn)
     logger.info(f"Accuracy score: {score}")
+    logger.info(f"True Positive Rate: {tpr}")
+    logger.info(f"False Positive Rate: {fpr}")
 
     # Create a dtreeviz object
     viz_model = dtreeviz.model(
@@ -56,7 +62,10 @@ def generate_tree(
         class_names=["Low Risk", "High Risk"],
     )
     v = viz_model.view(
-        title=f"Decision Tree for {architecture}\nHigh Risk is {threshold_value} or less correct predictions\nLow Risk is {threshold_value+1} or more correct predictions",
+        title=f"Decision Tree for {architecture}\n"
+        f"High Risk is {threshold_value} or less correct predictions\n"
+        f"Low Risk is {threshold_value+1} or more correct predictions\n"
+        f"Accuracy: {score:.2f} | TPR: {tpr:.2f} | FPR: {fpr:.2f}",
     )
     # Save the tree
     save_path = output_folder / f"tree_{architecture}_n_{threshold_value}.svg"

@@ -7,80 +7,81 @@
             margin=0.0;
             graph [label="Decision Tree for vit_base
 High Risk is 2 or less correct predictions
-Low Risk is 3 or more correct predictions", labelloc=t, fontname="Arial" fontsize=10 fontcolor="#444443"];
+Low Risk is 3 or more correct predictions
+Accuracy: 0.87 | TPR: 0.00 | FPR: 0.00", labelloc=t, fontname="Arial" fontsize=10 fontcolor="#444443"];
             node [margin="0.03" penwidth="0.5" width=.1, height=.1];
             edge [arrowsize=.4 penwidth="0.3"]
 
             node4 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node4_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node4_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node2 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node2_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node2_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node8 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node8_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node8_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node11 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node11_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node11_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node7 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node7_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node7_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node1 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node1_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node1_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node16 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node16_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node16_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node19 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node19_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node19_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node15 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node15_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node15_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node22 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node22_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node22_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node14 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node14_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node14_23637.svg"/></td>
                     </tr>
                     </table>>]
 	node0 [margin="0" shape=none label=<<table border="0">
                     
                     <tr>
-                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node0_15902.svg"/></td>
+                            <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/node0_23637.svg"/></td>
                     </tr>
                     </table>>]
             node4 -> leaf5 [penwidth=0.3 fontname="Arial" color="#444443" label=<> fontcolor="#444443"]
@@ -182,79 +183,79 @@ Low Risk is 3 or more correct predictions", labelloc=t, fontname="Arial" fontsiz
             leaf3 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf3_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf3_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf5 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf5_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf5_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf6 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf6_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf6_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf9 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf9_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf9_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf10 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf10_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf10_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf12 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf12_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf12_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf13 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf13_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf13_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf17 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf17_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf17_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf18 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf18_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf18_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf20 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf20_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf20_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf21 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf21_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf21_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf23 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf23_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf23_23637.svg"/></td>
                 </tr>
                 </table>>]
 	leaf24 [margin="0" shape=box penwidth="0" color="#444443" label=<<table border="0" CELLBORDER="0">
                 
                 <tr>
-                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf24_15902.svg"/></td>
+                        <td><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/leaf24_23637.svg"/></td>
                 </tr>
                 </table>>]
 
@@ -265,7 +266,7 @@ Low Risk is 3 or more correct predictions", labelloc=t, fontname="Arial" fontsiz
                         
                 <table border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td border="0" cellspacing="0" cellpadding="0"><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/legend_15902.svg"/></td>
+                        <td border="0" cellspacing="0" cellpadding="0"><img src="/var/folders/cp/w6zb81516yz3b7dw7m2sgt_80000gn/T/legend_23637.svg"/></td>
                     </tr>
                 </table>
                 
